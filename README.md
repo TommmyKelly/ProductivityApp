@@ -31,6 +31,11 @@ App
 First we'll start by working on the notes board and navigation
 
 # Development
-Please keep the folder structure consistent.
-We'll use PropTypes for the different components.
-And, use the 1 role principle
+1. Please keep the folder structure consistent.
+2. Use PropTypes for the different components.
+3. Use the 1 role principle.
+4. If a class component only have a render method, turn it into a functional component
+5. Each time you work on a new issue create a branch named `-` + the number of the issue.
+6. If you need to work on a something that needs something from a branch that is not merged yet, create a new branch out of that unmerged branch.
+7. Try to work on only the branch's component unless it's really necessary.
+8. Each time you are finished with a branch, create a pull request, DON'T merge it directly
