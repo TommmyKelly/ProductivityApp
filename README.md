@@ -6,7 +6,7 @@ The design will be similar to trello and kinda figmatic. Since I'm not a designe
 This is a React practice app so we don't need to make it look the best.
 We'll try to keep it professioanl just to feel like it's a real life project
 
-`App
+```App
 |__NavigationBar
 |  |__Logo
 |  |__NavigationLinks
@@ -24,6 +24,6 @@ We'll try to keep it professioanl just to feel like it's a real life project
 |   |__Have no idea rn
 |
 |__StopperBoard
-    |__Have no idea rn`
+    |__Have no idea rn```
     
 First we'll start by working on the notes board and navigation
