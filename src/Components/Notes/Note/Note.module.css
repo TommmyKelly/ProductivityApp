@@ -1,0 +1,23 @@
+.Note {
+   background-color: var(--color-primary);
+   border: 1px solid var(--color-primary-dark);
+   border-radius: 10px;
+   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+   width: 20rem;
+   min-height: 5rem;
+   max-height: 20rem;
+   padding: 1.5rem;
+}
+
+.Note:hover {
+   cursor: grab;
+}
+
+.Title {
+   font-size: 1.75rem;
+   margin-bottom: 0.5rem;
+}
+
+.Content {
+   font-size: 1.25rem;
+}
