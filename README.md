@@ -14,9 +14,8 @@ App
 |     |__NavigationLink
 |
 |__NoteBoard
-| |__Notes
-| |   |__Note
-| |     |__Text
+| |__Note
+| |  |__Text
 | |__NoteForm
 | |  |__Input
 | |__AddNoteButton
@@ -45,7 +44,8 @@ https://www.npmjs.com/package/react-markdown \
 https://www.npmjs.com/package/react-codemirror2 (Maybe) \
 https://www.npmjs.com/package/react-draggable \
 https://www.npmjs.com/package/redux \
-https://www.npmjs.com/package/redux-thunk \
+https://www.npmjs.com/package/react-redux \
+https://www.npmjs.com/package/redux-thunk (Maybe in a later version) \
 https://www.npmjs.com/package/react-router \
 https://www.npmjs.com/package/react-router-dom \
 https://www.npmjs.com/package/react-transition-group
