@@ -49,3 +49,7 @@ https://www.npmjs.com/package/redux-thunk (Maybe in a later version) \
 https://www.npmjs.com/package/react-router \
 https://www.npmjs.com/package/react-router-dom \
 https://www.npmjs.com/package/react-transition-group
+
+Color palets: \
+https://colorhunt.co/palette/206929 \
+https://colorhunt.co/palette/163897 \
