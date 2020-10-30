@@ -32,5 +32,5 @@ First we'll start by working on the notes board and navigation
 
 # Development
 Please keep the folder structure consistent.
-We'll use PropTypes for the different components
+We'll use PropTypes for the different components.
 And, use the 1 role principle
