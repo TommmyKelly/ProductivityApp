@@ -13,6 +13,10 @@
    cursor: grab;
 }
 
+.Note:hover:active {
+   cursor: grabbing;
+}
+
 .Title {
    font-size: 1.75rem;
    margin-bottom: 0.5rem;
