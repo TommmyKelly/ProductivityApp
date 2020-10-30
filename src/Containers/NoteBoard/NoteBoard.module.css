@@ -1,0 +1,5 @@
+.NoteBoard {
+   background-color: var(--color-primary-light);
+   min-width: 100%;
+   height: 100vh;
+}
