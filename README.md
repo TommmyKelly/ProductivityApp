@@ -39,3 +39,13 @@ First we'll start by working on the notes board and navigation
 6. If you need to work on a something that needs something from a branch that is not merged yet, create a new branch out of that unmerged branch.
 7. Try to work on only the branch's component unless it's really necessary.
 8. Each time you are finished with a branch, create a pull request, DON'T merge it directly
+
+Links to libraries that we'll use:
+https://www.npmjs.com/package/react-markdown
+https://www.npmjs.com/package/react-codemirror2 (Maybe)
+https://www.npmjs.com/package/react-draggable
+https://www.npmjs.com/package/redux
+https://www.npmjs.com/package/redux-thunk
+https://www.npmjs.com/package/react-router
+https://www.npmjs.com/package/react-router-dom
+https://www.npmjs.com/package/react-transition-group
