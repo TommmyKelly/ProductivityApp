@@ -1,0 +1,13 @@
+.Link {
+   padding: 1rem 2rem;
+   cursor: pointer;
+   transition: all 0.1s;
+}
+
+.Link.active {
+   background-color: var(--color-primary-light);
+}
+
+.Link:hover {
+   background-color: var(--color-primary-light);
+}
