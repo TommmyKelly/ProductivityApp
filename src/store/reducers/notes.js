@@ -6,15 +6,29 @@ const initialState = {
 };
 
 const createNote = (state, action) => {
-   return state;
+   const note = {
+      id: state.notes.length,
+      title: action.title,
+      content: action.content,
+   };
+   const updatedArray = [...state, note];
+   return updateObject(state, { notes: updatedArray });
 };
 
 const editNote = (state, action) => {
-   return state;
+   const updatedArray = [...state];
+   for (let i = 0; i < updatedArray.length; i++) {
+      if (updatedArray[i].id === action.id) {
+         updatedArray[i].title = action.title;
+         updatedArray[i].content = action.content;
+      }
+   }
+   return updateObject(state, { notes: updatedArray });
 };
 
 const deleteNote = (state, action) => {
-   return state;
+   const updatedArray = state.notes.filter(note => note.id !== action.id);
+   return updateObject(state, { notes: updatedArray });
 };
 
 const reducer = (state = initialState, action) => {
