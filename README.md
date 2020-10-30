@@ -14,9 +14,8 @@ App
 |     |__NavigationLink
 |
 |__NoteBoard
-| |__Notes
-| |   |__Note
-| |     |__Text
+| |__Note
+| |  |__Text
 | |__NoteForm
 | |  |__Input
 | |__AddNoteButton
