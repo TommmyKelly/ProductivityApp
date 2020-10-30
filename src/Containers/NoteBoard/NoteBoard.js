@@ -1,7 +1,9 @@
 import React from "react";
 
 class NoteBoard extends React.Component {
-   render() {}
+   render() {
+      return <div></div>;
+   }
 }
 
 export default NoteBoard;

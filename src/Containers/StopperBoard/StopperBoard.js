@@ -1,7 +1,9 @@
 import React from "react";
 
 class StopperBoard extends React.Component {
-   render() {}
+   render() {
+      return <div></div>;
+   }
 }
 
 export default StopperBoard;
