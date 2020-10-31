@@ -1,5 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { v4 as uuid } from 'uuid';
+import { createSlice } from "@reduxjs/toolkit";
+import { v4 as uuid } from "uuid";
 
 // If already familiar with redux, redux-toolkit speeds up the development proccess
 // https://redux-toolkit.js.org/api/createSlice
@@ -17,24 +17,24 @@ import { v4 as uuid } from 'uuid';
 const initialState = {};
 
 const notesSlice = createSlice({
-	name: 'notes',
-	initialState,
-	reducers: {
-		createNote(state, action) {
-			const newNoteId = uuid();
-			const note = action.payload;
-			state[newNoteId] = { ...note, id: newNoteId };
-		},
-		deleteNote(state, action) {
-			const note = action.payload;
-			const deletingNoteId = note.id;
-			delete state[deletingNoteId];
-		},
-		updateNote(state, action) {
-			const note = action.payload;
-			state[note.id] = { ...note };
-		},
-	},
+   name: "notes",
+   initialState,
+   reducers: {
+      createNote(state, action) {
+         const newNoteId = uuid();
+         const note = action.payload;
+         state[newNoteId] = { ...note, id: newNoteId };
+      },
+      deleteNote(state, action) {
+         const note = action.payload;
+         const deletingNoteId = note.id;
+         delete state[deletingNoteId];
+      },
+      updateNote(state, action) {
+         const note = action.payload;
+         state[note.id] = { ...note };
+      },
+   },
 });
 
 export const { createNote, deleteNote, updateNote } = notesSlice.actions;

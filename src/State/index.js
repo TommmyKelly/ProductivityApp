@@ -1,8 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit';
-import noteReducer from './Notes/NotesSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import noteReducer from "./Notes/NotesSlice";
 
 const rootReducer = {
-	notes: noteReducer,
+   notes: noteReducer,
 };
 
 const store = configureStore({ reducer: rootReducer });
