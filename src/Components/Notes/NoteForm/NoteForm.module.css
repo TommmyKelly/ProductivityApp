@@ -54,8 +54,8 @@ So, you can just target html elements to change their style
    border: none;
    cursor: pointer;
    transition: all 0.1s;
-   top: 5rem;
-   right: 2rem;
+   top: 2rem;
+   right: 0rem;
 }
 
 .Button:active {
@@ -65,4 +65,38 @@ So, you can just target html elements to change their style
 .Button:focus {
    outline: none;
    text-decoration: underline;
+}
+
+.SaveButton {
+   position: absolute;
+   background-color: var(--color-primary);
+   border: 1px solid var(--color-primary-dark);
+   box-shadow: 0.2rem 0.2rem 0.6rem rgba(0, 0, 0, 0.6);
+   cursor: pointer;
+   padding: 1rem;
+   border-radius: 50%;
+   height: 4rem;
+   width: 4rem;
+   right: -4rem;
+   bottom: -3.5rem;
+   transition: all 0.15s;
+}
+
+.SaveButton:focus,
+.SaveButton:hover {
+   outline: none;
+   transform: translateY(-0.4rem);
+   box-shadow: 0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.5);
+}
+
+.SaveButton:active {
+   transform: translateY(0.1rem);
+   box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.7);
+}
+
+.SaveIcon {
+   font-size: 2rem;
+   position: absolute;
+   bottom: 0.8rem;
+   right: 0.9rem;
 }

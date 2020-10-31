@@ -2,8 +2,8 @@ import React from "react";
 import CSSTransition from "react-transition-group/CSSTransition";
 import PropTypes from "prop-types";
 
-import "./Modal.css";
 import Backdrop from "../Backdrop/Backdrop";
+import classes from "./Modal.module.css";
 
 const Modal = props => (
    <React.Fragment>
@@ -15,7 +15,13 @@ const Modal = props => (
          timeout={300}
          classNames="grow"
       >
-         <div className="Modal" style={props.style}>
+         <div className={classes.Modal} style={props.style}>
+            <div className={classes.CloseButtonWrapper} onClick={props.clicked}>
+               <button
+                  onClick={props.clicked}
+                  className={classes.CloseButton}
+               ></button>
+            </div>
             {props.children}
          </div>
       </CSSTransition>

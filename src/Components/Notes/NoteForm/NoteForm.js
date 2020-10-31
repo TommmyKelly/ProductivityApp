@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSave } from "@fortawesome/free-solid-svg-icons";
 
 import classes from "./NoteForm.module.css";
 import Modal from "../../UI/Modal/Modal";
@@ -24,6 +26,12 @@ const NoteForm = props => {
       props.onChange(newNote);
    };
 
+   const onSubmitHandler = event => {
+      event.preventDefault();
+      props.closeModal();
+      props.onSubmit(note);
+   };
+
    const saveContent = () => {
       setIsEditing(false);
    };
@@ -39,8 +47,9 @@ const NoteForm = props => {
             border: "solid 2px var(--color-primary)",
          }}
          show
+         clicked={props.closeModal}
       >
-         <div className={classes.Form}>
+         <form className={classes.Form}>
             <input
                type="text"
                className={classes.Title}
@@ -56,7 +65,11 @@ const NoteForm = props => {
                      onChange={onContentChangedHandler}
                      placeholder="Content"
                   />
-                  <button className={classes.Button} onClick={saveContent}>
+                  <button
+                     type="button"
+                     className={classes.Button}
+                     onClick={saveContent}
+                  >
                      Save
                   </button>
                </React.Fragment>
@@ -67,12 +80,23 @@ const NoteForm = props => {
                      children={note.content}
                      className={classes.Content}
                   />
-                  <button className={classes.Button} onClick={editContent}>
+                  <button
+                     type="button"
+                     className={classes.Button}
+                     onClick={editContent}
+                  >
                      Edit
                   </button>
                </React.Fragment>
             )}
-         </div>
+            <button
+               type="submit"
+               className={classes.SaveButton}
+               onClick={onSubmitHandler}
+            >
+               <FontAwesomeIcon icon={faSave} className={classes.SaveIcon} />
+            </button>
+         </form>
       </Modal>
    );
 };
@@ -81,6 +105,7 @@ NoteForm.propTypes = {
    initialNote: PropTypes.object,
    onChange: PropTypes.func,
    onSubmit: PropTypes.func,
+   closeModal: PropTypes.func,
 };
 
 NoteForm.defaultProps = {
