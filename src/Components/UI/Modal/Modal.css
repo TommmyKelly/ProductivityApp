@@ -1,0 +1,34 @@
+.Modal {
+   position: fixed;
+   z-index: 500;
+   border-radius: 5px;
+   width: fit-content;
+   height: fit-content;
+   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 1);
+   padding: 16px;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   transform-origin: top left;
+   transition: all 0.3s ease-out;
+}
+
+.grow-enter {
+   transform: scale(0.3) translate(-50%, -50%);
+   opacity: 0;
+}
+
+.grow-enter-active {
+   transform: scale(1) translate(-50%, -50%);
+   opacity: 1;
+}
+
+.grow-exit {
+   transform: scale(1) translate(-50%, -50%);
+   opacity: 1;
+}
+
+.grow-exit-active {
+   transform: scale(0.3) translate(-50%, -50%);
+   opacity: 0;
+}
