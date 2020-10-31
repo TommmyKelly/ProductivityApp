@@ -5,6 +5,7 @@ import store from "./State";
 
 import NavigationBar from "./Components/NavigationBar/NavigationBar";
 import NoteBoard from "./Containers/NoteBoard/NoteBoard";
+import NoteForm from "./Components/Notes/NoteForm/NoteForm";
 
 function App() {
    return (
@@ -12,6 +13,7 @@ function App() {
          <BrowserRouter>
             <NavigationBar />
             <NoteBoard />
+            <NoteForm />
          </BrowserRouter>
       </Provider>
    );

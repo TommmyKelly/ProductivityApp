@@ -32,6 +32,16 @@
    font-size: 1.25rem;
    transition: all 0.2s;
    resize: none;
+   overflow: auto;
+   overflow-x: hidden;
+}
+
+/* 
+Basically, react-markdown converts normal markdown into html elements. 
+So, you can just target html elements to change their style 
+*/
+.Content ul {
+   margin-left: 1.5rem;
 }
 
 .Content:focus {
@@ -45,7 +55,7 @@
    cursor: pointer;
    transition: all 0.1s;
    top: 5rem;
-   right: 0.5rem;
+   right: 2rem;
 }
 
 .Button:active {
@@ -54,4 +64,5 @@
 
 .Button:focus {
    outline: none;
+   text-decoration: underline;
 }
