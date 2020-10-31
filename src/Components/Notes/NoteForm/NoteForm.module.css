@@ -1,0 +1,57 @@
+.Form {
+   height: 70vh;
+   width: 40vw;
+   display: flex;
+   flex-direction: column;
+   align-items: stretch;
+   position: relative;
+}
+
+.Title {
+   font-family: inherit;
+   background-color: transparent;
+   border: none;
+   margin-bottom: 1rem;
+   font-size: 1.8rem;
+   padding: 0.5rem;
+   transition: all 0.2s;
+   border-bottom: 1px solid var(--color-primary-light); /* To smooth the transition */
+}
+
+.Title:focus {
+   outline: none;
+   border-bottom: 1px solid var(--color-primary);
+}
+
+.Content {
+   font-family: inherit;
+   background-color: var(--color-primary-light);
+   border: 1px solid var(--color-primary);
+   padding: 0.5rem;
+   height: 100%;
+   font-size: 1.25rem;
+   transition: all 0.2s;
+   resize: none;
+}
+
+.Content:focus {
+   outline: none;
+}
+
+.Button {
+   position: absolute;
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   transition: all 0.1s;
+   top: 5rem;
+   right: 0.5rem;
+}
+
+.Button:active {
+   color: gray;
+}
+
+.Button:focus {
+   outline: none;
+}

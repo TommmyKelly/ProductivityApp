@@ -29,7 +29,7 @@ body {
    font-family: "Open Sans", sans-serif;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-   overflow-y: hidden;
+   overflow-x: hidden;
 }
 
 code {
