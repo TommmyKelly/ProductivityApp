@@ -1,0 +1,43 @@
+.Button {
+   width: 5rem;
+   height: 5rem;
+   border-radius: 50%;
+   position: fixed;
+   cursor: pointer;
+   box-shadow: 0.5rem 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+   transition: all 0.15s;
+}
+
+.Plus,
+.Plus::after {
+   content: "";
+   background-color: #fff;
+   width: 2rem;
+   height: 2.5px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.Plus::after {
+   transform: translate(-50%, -50%) rotateZ(90deg);
+}
+
+.Button:hover {
+   transform: translateY(-0.4rem);
+   box-shadow: 0.8rem 0.8rem 1.1rem rgba(0, 0, 0, 0.2);
+}
+
+.Button:active {
+   transform: translateY(0.1rem);
+   box-shadow: 0.4rem 0.4rem 0.7rem rgba(0, 0, 0, 0.2);
+}
+
+.Yellow {
+   background-color: var(--color-primary);
+}
+
+.Blue {
+   background-color: var(--color-secondary);
+}

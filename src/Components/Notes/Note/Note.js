@@ -10,7 +10,9 @@ import classes from "./Note.module.css";
 const Note = props => {
    // const [position, setPosition] = useState({ x: 0, y: 0 });
 
-   let content = props.content.slice(0, 175);
+   let title = props.title.slice(0, 13);
+   title += "...";
+   let content = props.content.slice(0, 190); // This is just a fit number that I found
    content += "...";
 
    // const onDragStop = event => {
@@ -20,7 +22,7 @@ const Note = props => {
    return (
       <Draggable bounds="parent" /*onStop={onDragStop}*/>
          <div className={classes.Note}>
-            <h3 className={classes.Title}>{props.title}</h3>
+            <h3 className={classes.Title}>{title}</h3>
             <p className={classes.Content}>{content}</p>
          </div>
       </Draggable>
