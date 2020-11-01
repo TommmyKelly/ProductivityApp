@@ -41,7 +41,11 @@ const notesSlice = createSlice({
       createNote(state, action) {
          const newNoteId = uuid();
          const note = action.payload;
-         state[newNoteId] = { ...note, id: newNoteId };
+         state.push({
+            ...note,
+            id: newNoteId,
+            position: { x: 0, y: 0 },
+         });
       },
       deleteNote(state, action) {
          const note = action.payload;
