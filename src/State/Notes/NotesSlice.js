@@ -23,6 +23,10 @@ const initialState = [
           ipsum voluptates laboriosam voluptatem, illo 
          dignissimos quo repellat rerum quibusdam 
          voluptas nihil numquam facilis earum.`,
+      position: {
+         x: 0,
+         y: 0,
+      },
    },
    {
       id: 2,
@@ -31,6 +35,10 @@ const initialState = [
          Unde praesentium illum rem quia odit, sed
           ipsum voluptates laboriosam voluptatem, illo 
          dignissimos quo repellat`,
+      position: {
+         x: 0,
+         y: 0,
+      },
    },
 ];
 
@@ -57,8 +65,21 @@ const notesSlice = createSlice({
             }
          }
       },
+      updateNotePosition(state, action) {
+         const note = action.payload;
+         for (let i = 0; i < state.length; i++) {
+            if (state[i].id === note.id) {
+               state[i].position = note.position;
+            }
+         }
+      },
    },
 });
 
-export const { createNote, deleteNote, updateNote } = notesSlice.actions;
+export const {
+   createNote,
+   deleteNote,
+   updateNote,
+   updateNotePosition,
+} = notesSlice.actions;
 export default notesSlice.reducer;
