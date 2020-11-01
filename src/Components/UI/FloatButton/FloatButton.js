@@ -19,14 +19,14 @@ const FloatButton = props => {
    const classList = [classes.Button, color, props.additionalClass].join(" ");
 
    return (
-      <div className={classList}>
+      <div className={classList} onClick={props.onClick}>
          <div className={classes.Plus}></div>
       </div>
    );
 };
 
 FloatButton.propTypes = {
-   clicked: PropTypes.func,
+   onClick: PropTypes.func,
    color: PropTypes.oneOf(["Yellow", "Blue"]),
    additionalClass: PropTypes.string,
 };

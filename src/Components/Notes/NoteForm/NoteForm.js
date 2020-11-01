@@ -10,7 +10,7 @@ import Modal from "../../UI/Modal/Modal";
 
 const NoteForm = props => {
    const [note, setNote] = useState(props.initialNote);
-   const [isEditing, setIsEditing] = useState(false);
+   const [isEditing, setIsEditing] = useState(props.startInEdit);
 
    const onTitleChangedHandler = event => {
       const newNote = { ...note };
@@ -106,6 +106,7 @@ NoteForm.propTypes = {
    onChange: PropTypes.func,
    onSubmit: PropTypes.func,
    closeModal: PropTypes.func,
+   startInEdit: PropTypes.bool,
 };
 
 NoteForm.defaultProps = {
@@ -115,6 +116,7 @@ NoteForm.defaultProps = {
    },
    onChange: newNote => {},
    onSubmit: newNote => {},
+   startInEdit: false,
 };
 
 export default NoteForm;
