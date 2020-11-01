@@ -14,7 +14,25 @@ import { v4 as uuid } from "uuid";
 }
 */
 
-const initialState = {};
+const initialState = [
+   {
+      id: 1,
+      title: "Cool idea",
+      content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+         Unde praesentium illum rem quia odit, sed
+          ipsum voluptates laboriosam voluptatem, illo 
+         dignissimos quo repellat rerum quibusdam 
+         voluptas nihil numquam facilis earum.`,
+   },
+   {
+      id: 2,
+      title: "What if",
+      content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+         Unde praesentium illum rem quia odit, sed
+          ipsum voluptates laboriosam voluptatem, illo 
+         dignissimos quo repellat`,
+   },
+];
 
 const notesSlice = createSlice({
    name: "notes",
@@ -27,12 +45,17 @@ const notesSlice = createSlice({
       },
       deleteNote(state, action) {
          const note = action.payload;
-         const deletingNoteId = note.id;
-         delete state[deletingNoteId];
+         let index = state.indexOf(note);
+         index -= 1;
+         state.splice(index, 1);
       },
       updateNote(state, action) {
          const note = action.payload;
-         state[note.id] = { ...note };
+         for (let i = 0; i < state.length; i++) {
+            if (state[i].id === note.id) {
+               state[i] = { ...note };
+            }
+         }
       },
    },
 });

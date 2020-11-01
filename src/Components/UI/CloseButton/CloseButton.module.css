@@ -1,0 +1,55 @@
+.CloseButtonWrapper {
+   position: absolute;
+   top: -1rem;
+   right: -1rem;
+   cursor: pointer;
+   padding: 1.5rem;
+   border-radius: 50%;
+   border: 1px solid var(--color-primary-dark);
+   background-color: var(--color-primary);
+   box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.5);
+   transition: all 0.15s;
+}
+
+.CloseButton,
+.CloseButton::after {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   cursor: pointer;
+   border: none;
+   background-color: transparent;
+}
+
+.CloseButton:focus {
+   outline: none;
+}
+
+.CloseButtonIcon,
+.CloseButtonIcon::after {
+   content: "";
+   background-color: black;
+   transition: all 0.1s;
+   width: 1.9rem;
+   height: 0.2rem;
+}
+
+.CloseButtonIcon {
+   transform: translate(-50%, -50%) rotateZ(45deg);
+}
+
+.CloseButtonIcon::after {
+   transform: translate(-50%, -50%) rotateZ(90deg); /* This is in addition to the CloseButton rotation */
+}
+
+.CloseButtonWrapper:hover,
+.CloseButtonWrapper:focus {
+   transform: translateY(-0.3rem);
+   box-shadow: 0.2rem 0.2rem 0.7rem rgba(0, 0, 0, 0.4);
+}
+
+.CloseButtonWrapper:active {
+   transform: translateY(0.1rem);
+   box-shadow: 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.6);
+}

@@ -1,7 +1,10 @@
-.Link {
+.Link:link,
+.Link:visited {
    padding: 1rem 2rem;
    cursor: pointer;
    transition: all 0.1s;
+   color: black;
+   text-decoration: none;
 }
 
 .Link.active {

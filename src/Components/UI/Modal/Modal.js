@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 import Backdrop from "../Backdrop/Backdrop";
 import classes from "./Modal.module.css";
+import CloseButton from "../CloseButton/CloseButton";
 
 const Modal = props => (
    <React.Fragment>
@@ -16,12 +17,7 @@ const Modal = props => (
          classNames="grow"
       >
          <div className={classes.Modal} style={props.style}>
-            <div className={classes.CloseButtonWrapper} onClick={props.clicked}>
-               <button
-                  onClick={props.clicked}
-                  className={classes.CloseButton}
-               ></button>
-            </div>
+            <CloseButton onClick={props.clicked} />
             {props.children}
          </div>
       </CSSTransition>

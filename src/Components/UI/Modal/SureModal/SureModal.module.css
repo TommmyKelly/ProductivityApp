@@ -1,0 +1,45 @@
+.SureModal {
+   width: fit-content;
+   display: flex;
+   flex-direction: column;
+}
+
+.SureText {
+   font-size: 2rem;
+   margin-bottom: 2.5rem;
+}
+
+.ButtonsWrapper {
+   display: flex;
+   justify-content: space-around;
+}
+
+.NoButton,
+.YesButton {
+   border: 1px solid black;
+   padding: 0.7rem 4rem;
+   font-size: 1.5rem;
+   cursor: pointer;
+}
+
+.YesButton {
+   background-color: red;
+   color: white;
+}
+
+.YesButton:hover {
+   border: none;
+   background-color: var(--color-primary-light);
+   color: red;
+}
+
+.NoButton {
+   background-color: greenyellow;
+   color: white;
+}
+
+.NoButton:hover {
+   border: none;
+   background-color: var(--color-primary-light);
+   color: greenyellow;
+}
